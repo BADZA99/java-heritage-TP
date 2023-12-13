@@ -4,6 +4,9 @@ import java.util.ArrayList;
 public class Professeur extends Personne {
     private ArrayList<String> matieres;
     private String grade;
+    // cree une enumeration grade (docteur,ingenieur,technicien)
+  
+
 
     public Professeur(){
         super();
@@ -31,6 +34,31 @@ public class Professeur extends Personne {
         super.saisirP();
         java.util.Scanner sc = new java.util.Scanner(System.in);
         System.out.println("Grade : ");
+        // afficher un menu pour choisir un grade
+        System.out.println("Choisir un grade : ");
+        System.out.println("1- Docteur");
+        System.out.println("2- Ingenieur");
+        System.out.println("3- Technicien");
+        System.out.println("4- Autre");
+        int choix = sc.nextInt();
+        sc.nextLine();
+        switch(choix){
+            case 1:
+                this.grade = "Docteur";
+                break;
+            case 2:
+                this.grade = "Ingenieur";
+                break;
+            case 3:
+                this.grade = "Technicien";
+                break;
+            case 4:
+                this.grade = "Autre";
+                break;
+            default:
+                this.grade = "Autre";
+                break;
+        }
         this.grade = sc.nextLine();
         System.out.println("Nombre de matieres : ");
         int n = sc.nextInt();

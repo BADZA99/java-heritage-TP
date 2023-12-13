@@ -19,7 +19,8 @@ public class Etudiant extends Personne {
 
     // getteurs et setteurs
     public String getMatricule(){
-        return this.matricule;
+        return this.matricule;    
+        
     }
 
     public double getMoyenne(){

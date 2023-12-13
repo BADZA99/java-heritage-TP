@@ -57,8 +57,15 @@ public void saisirP(){
     this.nom = sc.nextLine();
     System.out.println("Donner le prenom : ");
     this.prenom = sc.nextLine();
-    System.out.println("Donner l'age : ");
-    this.age = sc.nextInt();
+
+    do {
+        System.out.println("Donner l'age : ");
+        while (!sc.hasNextInt()) {
+            System.out.println("Ce n'est pas un nombre valide. Essayez encore.");
+            sc.next(); // important!
+        }
+        this.age = sc.nextInt();
+    } while (this.age <= 0);
     }
 
 }
